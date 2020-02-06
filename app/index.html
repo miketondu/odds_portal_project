@@ -19,15 +19,20 @@
     <form action="{{ url_for('predict')}}"method="post">
       <input type="text" name="home_team" placeholder="home team" required="required" />
         <input type="text" name="away_team" placeholder="away team" required="required" />
-    <input type="text" name="altitude" placeholder="altitude" required="required" />
+         <input type="text" name="altitude" placeholder="altitude" required="required" />
+           <input type="text" name="home_odds" placeholder="home odds" required="required" />
+            <input type="text" name="draw_odds" placeholder="draw odds" required="required" />
+              <input type="text" name="away_odds" placeholder="away odds" required="required" />
 
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict winning odds for home team</button>
     </form>
 
    <br>
-   <br>
    {{ prediction_text }}
+   <br>
+   {{ kelly_text }}
+
 
  </div>
 
