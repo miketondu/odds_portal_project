@@ -2,7 +2,7 @@
 from sklearn.externals import joblib
 from flask import Flask, request, jsonify, render_template
 import pandas as pd
-import numpy as np
+
 
 # Your API definition
 app = Flask(__name__)
@@ -73,4 +73,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+    app.run(host='0.0.0.0', port=80, debug=True)
